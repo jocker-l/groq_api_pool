@@ -20,12 +20,8 @@ func InitConfig() {
 	if global.GroqUrl == "" {
 		global.GroqUrl = "https://api.groq.com/openai"
 	}
-	global.Authorization = os.Getenv("AUTHORIZATION")
 	global.ChinesePrompt = os.Getenv("CHINESE_PROMPT")
 	global.SupportApikey = os.Getenv("SUPPORT_APIKEY")
-	if global.SupportApikey == "" {
-		global.SupportApikey = "true"
-	}
 	global.IsVercel = os.Getenv("IS_VERCEL")
 	global.ApiKeyPrefix = os.Getenv("API_KEY_PREFIX")
 	if global.ApiKeyPrefix == "" {
